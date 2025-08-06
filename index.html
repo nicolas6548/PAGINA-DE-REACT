@@ -100,7 +100,7 @@
       funciones de JavaScript que devuelven código
       <strong>HTML</strong> (<strong>o casi</strong>):
     </p>
-
+    <br>
     <pre>
       function component(){
         return &lt;h1&gt; ¡Hola, amigo!&lt;/h1&gt;
@@ -114,7 +114,7 @@
 
     <p>Anteriormente, se utilizaban <strong>componentes de clases</strong> (<strong>programacion orientada a objetos</strong> ). Sin embargo, aunque la <strong>orientación a objetos</strong>sigue siendo actualmente una forma válida de trabajar, en <strong>REACT</strong> se ha reemplazado por los <strong>componentes funcionales</strong>, ya que son más simples dentro de su ecosistema.</p>
 
-    <h2>JSX</h2>
+    <h2 id="jsx">JSX</h2>
     <p>en <strong>react</strong> se utiliza <strong>JSX</strong> como lenguaje de marcado en lugar de HTML. <strong>JSX</strong> es una sintaxis que, aunque parece HTML, realmente es JavaScript y se encarga de leer el código JSX y convertirlo a un HTML equivalente con añadidos JavaScript:</p>
     <br>
     <pre>
@@ -139,14 +139,16 @@
     </script>
 
     <p>Al principio, suele disgustar mucho por su mezcla de HTML y JavaScript, algo que simpre se ha tendido a separar. sin embargo, el objetivo de esto es no sepparar tecnologías: crear componentes de modo que, siempre que tengan relación entre sí, estén juntos, independientemente de la tecnología utilizada.</p>
-    <p>VER ARTICULA SOBRE JSXñ</p>
+    <p>VER ARTICULA SOBRE JSX</p>
+    <a href="./jsx.html" target="_blank">JSX: El HTML de REACT</a>
 
-    <h2>VIRTUAL <strong>DOM</strong></h2>
+    <h2 id="dom">VIRTUAL <strong>DOM</strong></h2>
 
     <p>en el ecosistema de <strong>REACT</strong> no se suele trabajar directamente con el <strong>DOM</strong>. Aunque pueden hacerlo, está mal visto y se considera una mala práctica. Esto es así porque <strong>REACT</strong> utiliza su llamado <strong>VIRTUAL DOM</strong>: una especie de <strong>DOM</strong> ligero en memoria que es al que <strong>REACT</strong> accede directamente. Por esta razón, normalmente el desarrollo de <strong>REACT</strong> no necesita preocuparse por el <strong>DOM</strong>. <strong>REACT</strong> se encargará de mantenerlo actualizado cuando sea necesario.</p>
     <br>
     <p>Existe un mito que afirma que el <strong>"DOM es lento"</strong> y es mejor utilizr un <strong>virtual DOM</strong>. Esto no es cirto. Realmente, el <strong>DOM</strong> no es lento, sino que es muy común que se gestione incorrectamente por el desarrollador. Si evitamos acceder al <strong>DOM real</strong>  dejamos esa tarea al <strong>Virtual DOM de REACT</strong>, envitamos la posibilidad de gestionarlo incorrectamente.</p>
     <p>VER ARTICULO "TIPOS DE DOM"</p>
+    <a href="./dom.html" target="_blank">TIPOS DE DOM</a>
 
 
     <h2>DATOS UNIDIRECCIONALES</h2>
