@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>REACT</title>
+  </head>
+  <body>
+    <h1>REACT</h1>
+    <p>
+      Esta pagina la estoy haciendo gracias a los siguiente videos y paginas
+    </p>
+    <ul>
+      <li>
+        <a href="https://lenguajejs.com/react/" target="_blank"
+          >MANZ.DEV un genio total</a
+        >
+      </li>
+      <li>
+        <a href="https://es.react.dev/learn" target="_blank"
+          >PAGINA OFICIAL DE REACT ("oficial?")</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=nAe_a1mdNDY&list=PLU8oAlHdN5BmlVfm2bJshR3qPtoyukQ_b"
+          target="_blank"
+          >CURSO DE YOUTUBE DE PILDORAS INFORMATICAS</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://www.youtube.com/watch?v=7iobxzd_2wY&list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29"
+          target="_blank"
+          >CURSO DE YOUTUBE DE MIDULIVE</a
+        >
+      </li>
+    </ul>
+
+    <br /><br />
+    <hr />
+    <h2>QUE ES <strong>REACT</strong>?</h2>
+
+    <p>
+      <strong
+        >Vamos a seguir la lista y al principio tenemos al genio
+        <strong>MANZ DEV</strong></strong
+      >
+    </p>
+
+    <h2>¿QUE ES REACT?</h2>
+    <p>
+      <strong>REACT</strong> es una librería JavaScript por lo que, aunque
+      puedes aprenderlo desde cero, es muy recomendable tener conocimientos
+      previos de JavaScript, por lo que si no lo tienes, tomate un tiempito y
+      mirate JavaScript antes.
+    </p>
+
+    <h2>NUEVAMENTE PREGUNTAMOS ¿QUE ES REACT?</h2>
+
+    <p>
+      <strong>REACT</strong> es una libreria para crear interfaces web de
+      usuario con <strong>JavaScript</strong>. El objetivo de
+      <strong>REACT</strong> es tener a nuestra disposición un lenguaje que
+      simplique la cantidad de detalles que hay que hacer en
+      <strong>JavaScript</strong>, sin perder demasiado control o
+      personalizacion en lo que hacemos
+    </p>
+    <br />
+    <p>
+      Muchos de los conceptos que vamos a ver relacionados con
+      <strong>REACT</strong>, cambian los fundamentos o conceptos utilizados en
+      el desarrollo web, introducinedo nuevos conceptos o realizando muchas
+      tareas de forma transparente por debajo, de modo que el desarrollador no
+      tenga que controlar al detalle muchas de esas cosas.
+    </p>
+
+    <h2>CONCEPTOS</h2>
+
+    <p>
+      Antes de continuar, recordemos que <strong>REACT</strong> es una
+      abstracción, es decir, un lenguaje que está sobre
+      <strong>JavaScript</strong>, y para simplificar el trabajo del
+      desarrollador, cambia muchos patrones y formas de trabajar por otras, con
+      el objetivo de que sea más sencillo.
+    </p>
+    <p>
+      Veamos una lista de <strong>conceptos</strong> que se utilizan en
+      <strong>REACT</strong> como equivalencia a patrones utilizados en
+      <strong>JavaScript</strong> u otros sectores
+    </p>
+
+    <h2>COMPONENTES</h2>
+    <p>
+      En <strong>REACT</strong> se trabaja con <strong>componentes</strong>. A
+      grandes rasgos, se trata de crear "etiquetas propias" que se comportan
+      como etiquetas <strong>HTML</strong>. La forma preferida de crearlas es
+      utilizar los llamados <strong>componentes funcionales</strong>, es decir,
+      funciones de JavaScript que devuelven código
+      <strong>HTML</strong> (<strong>o casi</strong>):
+    </p>
+
+    <pre>
+      function component(){
+        return &lt;h1&gt; ¡Hola, amigo!&lt;/h1&gt;
+      }</pre>
+    <pre><h1> ¡Hola, amigo!</h1></pre>
+    <script>
+      function component() {
+        return <h1> ¡Hola, amigo!</h1>;
+      }
+    </script>
+
+    <p>Anteriormente, se utilizaban <strong>componentes de clases</strong> (<strong>programacion orientada a objetos</strong> ). Sin embargo, aunque la <strong>orientación a objetos</strong>sigue siendo actualmente una forma válida de trabajar, en <strong>REACT</strong> se ha reemplazado por los <strong>componentes funcionales</strong>, ya que son más simples dentro de su ecosistema.</p>
+
+    <h2>JSX</h2>
+    <p>en <strong>react</strong> se utiliza <strong>JSX</strong> como lenguaje de marcado en lugar de HTML. <strong>JSX</strong> es una sintaxis que, aunque parece HTML, realmente es JavaScript y se encarga de leer el código JSX y convertirlo a un HTML equivalente con añadidos JavaScript:</p>
+    <br>
+    <pre>
+      function component(){
+        const name = "Nicolas";
+        return(
+          &lt;div&gt;
+            &lt;h1&gt;¡Hola, {name}!&lt;/h1&gt;
+            &lt;/div&gt;
+        );
+      }</pre>
+    <pre><div><h1>¡Hola, Nicolas!</h1></div></pre>
+    <script>
+      function component(){
+        const name = "Nicolas";
+        return(
+          <div>
+            <h1>¡Hola, {name}!</h1>
+            </div>
+        );
+      }
+    </script>
+
+    <p>Al principio, suele disgustar mucho por su mezcla de HTML y JavaScript, algo que simpre se ha tendido a separar. sin embargo, el objetivo de esto es no sepparar tecnologías: crear componentes de modo que, siempre que tengan relación entre sí, estén juntos, independientemente de la tecnología utilizada.</p>
+    <p>VER ARTICULA SOBRE JSXñ</p>
+
+    <h2>VIRTUAL <strong>DOM</strong></h2>
+
+    <p>en el ecosistema de <strong>REACT</strong> no se suele trabajar directamente con el <strong>DOM</strong>. Aunque pueden hacerlo, está mal visto y se considera una mala práctica. Esto es así porque <strong>REACT</strong> utiliza su llamado <strong>VIRTUAL DOM</strong>: una especie de <strong>DOM</strong> ligero en memoria que es al que <strong>REACT</strong> accede directamente. Por esta razón, normalmente el desarrollo de <strong>REACT</strong> no necesita preocuparse por el <strong>DOM</strong>. <strong>REACT</strong> se encargará de mantenerlo actualizado cuando sea necesario.</p>
+    <br>
+    <p>Existe un mito que afirma que el <strong>"DOM es lento"</strong> y es mejor utilizr un <strong>virtual DOM</strong>. Esto no es cirto. Realmente, el <strong>DOM</strong> no es lento, sino que es muy común que se gestione incorrectamente por el desarrollador. Si evitamos acceder al <strong>DOM real</strong>  dejamos esa tarea al <strong>Virtual DOM de REACT</strong>, envitamos la posibilidad de gestionarlo incorrectamente.</p>
+    <p>VER ARTICULO "TIPOS DE DOM"</p>
+
+
+    <h2>DATOS UNIDIRECCIONALES</h2>
+
+    <p>
+      Al contrario de como se trabaja en otros ecosistemas, en <strong>REACT</strong> los datos viajan en forma <strong>unidireccional</strong>, osea, esto significa que un elemento <strong>HTML</strong> padre puede enviar datos a sus elementos <strong>HTML</strong> hijos, pero no a la inversa.
+    </p>
+    <br>
+    <p>
+      Entenderemos esto un poco más adelante. De momento, lo que debemos tener en cuenta es que debido a esta "limitación" tenemos una ventaja y una desventaja:
+    </p>
+
+    <ul>
+      <li>Es más simple y predecible gestionar los datos.</li>
+      <li>Es menos flexible al no poder trabajar de forma bidireccional</li>
+    </ul>
+
+    <p>
+      En casos donde se requiera compartir datos de forma más compleja, se suelen optar por <strong>stores (librerías con estado centralizado)</strong>, de las que hablaremos más adelante.
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </body>
+</html>
