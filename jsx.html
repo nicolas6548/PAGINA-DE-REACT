@@ -3,10 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilos/style_jsx.css" />
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <title>Document</title>
   </head>
   <body>
-    <h1>JSX</h1>
+    <h1 class="oficial">JSX: EL HTML DE REACT</h1>
+
+    <p>
+      Cuando trabajamos con <strong>REACT</strong> y necesitamos escribir el
+      <strong>HTML</strong> de un fichero o componente, no vamos a escribir
+      <strong>HTML</strong> directamente (<strong
+        >aunque pueda parecer que lo estamos haciendo</strong
+      >
+      ). En <strong>REACT</strong> se utiliza una sintaxis llamada
+      <strong>JSX</strong>, que realmente es código
+      <strong>JavaScript</strong> con apariencia de <strong>HTML</strong> que se
+      escribe en el interioor de funciones llamadas
+      <strong>componentes funcionales</strong> en los que profundizaremos un
+      poco más adelante.
+    </p>
+
+    <h2>¿QUE ES JSX?</h2>
+
+    <p>
+      Como hemos mencionado, <strong>JSX</strong> es código JavaScript con
+      apariencia de marcado <strong>HTML</strong>. Observa la siguiente función
+      de ejemplo que devuelve un fragmento de código <strong>JSX</strong>:
+    </p>
+
+    <pre>
+      function component(){
+        return &lt;h1>Hola&lt;/h1>;
+      }
+      <h1>Hola</h1>
+    </pre>
+    <script type="text/babel">
+      function component() {
+        return <h1>Hola</h1>;
+      }
+    </script>
+
+    <p>
+      Si conoces minimamente <strong>JavaScript</strong>, esto te resultará
+      bastante extraño, ya que no se puede añadir una etiqueta
+      <strong>HTML</strong> directamente en el código
+      <strong>JavaScript</strong> (<strong
+        >observa que no tiene las comillas de un string</strong
+      >
+      ). Pero como hemos mencionado, estamos trabajando con ficheros
+      <strong>.JSX</strong> que son procesados por <strong>Vite</strong> y
+      <strong>React</strong> antes de llegar al navegador, por lo que el
+      JavaScript final es diferente.
+    </p>
+    <br />
+    <p>
+      Para dejarlo más claro, vamos a ver que es realmente lo que le llega al
+      navegador de ese fragmento de <strong>código JSX</strong>:
+    </p>
+
+
+    <pre>
+      function component() {
+        return &lt;h1>Hola&lt;/h1>;
+        <h1>Hola</h1>
+      }
+      const jsx = component();
+      console.log(jsx);
+    </pre>
+    <script>
+      function component() {
+        return <h1>Hola</h1>;
+      }
+      const jsx = component();
+      console.log(jsx);
+    </script>
+
+    <p>
+      <strong>REACT</strong> se encargará internamente de trabajar con ese objeto por nosotros y añadirlo al <strong>HTML</strong> real de la página, de modo que nosotros solo nos tengamos que preocupar del código que escribimos en el editor.
+    </p>
+
+
+    <h2>HTML vs JSX</h2>
+
+    <p>
+      Aunque pueda parecerlo, <strong>JSX</strong> no es 100% compatible con <strong>HTML</strong>, y tiene sus propias normas. Además, <strong>JSX</strong> permite evaluar código JavaScript y devolverlo evaluado, lo que hace que sea mucho más cómodo a la hora de trabajar.
+    </p>
+    <br>
+    <p>
+      La idea es que con <strong>REACT</strong> podamos trabajar con lógica de programación y estructuras de datos en JavaScript antes del <strong>return</strong>, y luego al devolver la información, se devuelva el código <strong>JSX</strong> para construir el <strong>HTML</strong>.
+    </p>
+    <br>
+    <p>
+      En cierta forma, la forma de pensar el trabajar con <strong>REACT</strong> es crear funciones que devuelven código <strong>JSX</strong>, y que se utilizarán como si fueran una etiqueta <strong>HTML</strong>. Veamos ahora un ejemplo donde un código <strong>HTML</strong> correcto no funcionaría en <strong>REACT</strong>:
+    </p>
+    <br>
+    <pre>
+        export function App(){
+        /* Aqui va la lógica JavaScript*/
+        return(
+          &lt;div>
+            &lt;p>¡Hola, Nicolas! &lt;br> ¿Qué estas haciendo?&lt;/p>
+          &lt;/div>
+        )
+      }      
+      </pre>
+
+    <!--<script>
+      export function App(){
+        /* Aqui va la lógica JavaScript*/
+        return(
+          <div>
+            <p>¡Hola, Nicolas! <br> ¿Qué estas haciendo?</p>
+          </div>
+        )
+      }
+    </script> -->
+
+    <p>
+      Este fragmento de código tiene una etiquete <strong>HTML <br></strong> que no requiere cierre. Esto en <strong>HTML</strong> es correcto, sin embargo en <strong>REACT</strong> te dará error ya que se espera que todas las etiquetas <strong>HTML</strong> se cierren. Hay dos formas de solucionarlo ne <strong>REACT</strong>:
+    </p>
+    <br>
+    <ol>
+      <LI>Escribir una etiqueta de cierre &lt;/br>. <strong>SI</strong> es correcto en <strong>REACT</strong> pero incorrecto en <strong>HTML</strong> puro.</li>
+      <li><strong>Autocerrar</strong> la etiqueta sin cierre &lt;br /> es válida en <strong>HTML (heredado de XHTML)</strong></li>
+    </ol>
+
+    <p>
+      Lo mismo ocurre con otras etiquetas <strong>HTML</strong> que no requieren cierre como: <strong>&lt;img>, &lt;hr>, &lt;meta>, &lt;link>, &lt;input>, &lt;source>, &lt;track>, &lt;base></strong>, etc
+    </p>
+
+    <p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
     <button><a href="./index.html#jsx">volver</a></button>
   </body>
