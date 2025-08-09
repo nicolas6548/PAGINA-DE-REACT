@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./estilos/style_jsx.css" />
+    <title>REACT POR PILDORAS</title>
+  </head>
+  <body>
+    <p>
+      esta seccion esta realizada por el curso de videos de
+      <strong>PILDORAS INFORMATICAS</strong>
+    </p>
+    <h1>PILDORAS INFORMATICAS</h1>
+
+    <p>
+      El que es <strong>REACT</strong> ya lo vimos, aca nos vamos a centrar en
+      conceptos o ideas distintas o que no se vieron en las otras paginas o
+      videos de <strong>REACT</strong>
+    </p>
+    <br><hr><br><hr><br><hr>
+    <h3>DONDE PODEMOS USAR REACT?</h3>
+    <p>(estos son algunos ejemplos, pero pueden haber muchos mas)</p>
+    <ul>
+      <li>APLICACIONES WEB</li>
+      <li>APLICACIONES MOVILES</li>
+      <li>APLICACIONES DE ESCRITORIO</li>
+      <li>PLUGINS / WIDGETS</li>
+      <li>ELECTRODOMESTICOS INTELIGENTES</li>
+      <li>VR (realidad virtual)</li>
+    </ul>
+
+    <h3>CARACTERISTICAS PRINCIALES</h3>
+    <ol>
+      <li>COMPONENTES REUTILIZABLES</li>
+    <p>Vamos a dar un ejemplo</p>
+      <p>Nos gusto como quedo una etiquete que hicimos en otro proyecto, como quedo la foto, la tipografia, como estaba todo acomodado, pero si lo queremos reutilizar en otro proyecto tenemos que buscar el codigo <strong>HTML</strong>, el codigo <strong>CSS</strong> y de ser necesario el codigo <strong>JavaScript</strong> de esa etiqueta.</p>
+      <p>Con <strong>REACT</strong> esa etiqueta esta encapsulada como si fuera una caja para que vos la transportes a donde quieras, en esa especie de caja, tenes el codigo <strong>HTML, CSS y JavaScript</strong>, todo juntito, para que lo lleves al proyecto que vos quieras.</p>      
+      <li>JSX</li>
+      <p>¿Pero que es esto?</p>
+      <p>JavaScript XML</p>
+      <p>Esto hace que se pueda escribir codigo <strong>HTML</strong> dentro de JavaScript, sisi, como leiste, ahora vas a poder hacer una funcion por ejemplo y dentro de usa funcion vas a poder poner un &lt;div>, un &lt;h1>, etc, vamos a ver un ejemplo:</p>
+      <br>
+      <strong>
+        <pre>
+          function component(){
+          const name = "Nicolas";
+          return(
+            &lt;div&gt;
+              &lt;h1&gt;¡Hola, {name}!&lt;/h1&gt;
+              &lt;/div&gt;
+          );
+        </pre>
+      </strong>
+      <p>Eso es codigo <strong>JSX</strong> donde vemos un div y un h1</p>
+      <li>VIRTUAL DOM</li>
+      <p>Primero vamos a ver que es el <strong>DOM</strong></p>
+      <p>El <strong>DOM (Document Object Model</strong> es:</p>
+      <ul>
+        <li>Una repersentacion en árbol de la estructura de un documento <strong>HTML/XML</strong></li>
+        <li>Una interfaz de programación que permite manippular documentos web</li>
+        <li>Actualizado directamente por el navegador cuando hay cambios</li>
+        <h3>Algunas caracteristicas del <strong>DOM</strong> real son:</h3>
+        <li>Es la reppresentación directa de lo que ves en el navegador (pero en forma de arbol, donde ves desde la <strong>JERARQUIA</strong> de las etiquetas del documento web, desde las etiquetas padres, pasando por las etiquetas hijas, nietas y todas las que tenga la pagina web</li>
+        <li>Cada cambio en la pagina web, provoca un <strong>REFLOW</strong> (recalculo de posicioones) y repaint (redibujado), un pequeño ejemplo es en <strong>FACEBOOK</strong>, al hacer un comentario en una publicacion, se hace un <strong>REFLOW y REPAINT</strong> de todo el documento <strong>HTML</strong> en el cual se carga el comentario que se ingreso (lo que en documentos extensos y maquinas con pocos recursos eso hacia muy lenta la carga de datos constante)</li>
+      </ul>
+      <p>Pero en <strong>FACEBOOK</strong> dijeron: <strong>¿NO SE PUEDE MEJORAR ESTO?</strong></p>
+      <p>Y crearon el <strong>VIRTUAL DOM</strong></p>
+      <h3><strong>¿QUE ES EL VIRTUAL DOM?</strong></h3>
+      <ul>
+        <li>Una abstraccion ligera del <strong>DOM</strong> real</li>
+        <li>Una copia en memoria de la representacion del <strong>DOM</strong></li>
+        <p>Y ya me imagino sus caras jajajajjaja, el <strong>DOM VIRTUAL</strong> se almacena en memoria toda la pagina web (en si no toda, sino el sector que se esta viendo en ese preciso momento), vamos a dar un ejemplo sencillo para que se entienda</p>
+        <p><strong>GOOGLE MAPS</strong>, al abrilo, nos muestra una porcion del mapa donde estamos actualmente, en la parte superior (en algunos casos) nos muestra algunas opciones como: <i>RESTAURANTES, MUSEOS, INFORMACION UTIL, ETC</i>, si nosotros queremos ver que museos hay cerca de donde estamos, no se refrezca toda la pagina para mostrarnos los museos, sino que se compara la informacion que pedimos con el <strong>DOM VIRTUAL</strong> y solo nos agrega la informacion solicitada, todo lo que ya estaba cargado lo deja y solo carga lo que necesitamos, de esa forma es mas rapido y consume menos recursos que el <strong>DOM</strong> al cargar todo cada ves que haciamos una consulta o busqueda</p>
+        <li></li>
+      </ul>
+
+
+      <li>DATA BLINDING UNIDIRECCIONAL</li>
+      <p>¿QUE SIGNIFICA?</p>
+      <p>El data binding unidireccional (flujo de datos unidireccional) significa que los datos fluyen en una sola dirección en la aplicacion:
+        <ul>
+          <li>De los componentes padres a los componentes hijos</li>
+
+          <li>Nunca en la dirección inversa (los hijos no pueden modificar directamente las propiedades que reciben</li>
+        </ul>
+        <h3>Caracteristicas clave</h3>
+        <ul>
+          <li><strong>FLUJO PREDECIBLE</strong>: Los datos solo van en una dirección, haciendo más fácil entender cómo cambia el estado</li>
+          <li><strong>PROPIEDADES DE SOLO LECTURA</strong>: Los componentes hijos reciben datos pero no los modifican directamente</li>
+          <li><strong>ACTUALIZACION CONTROLADA</strong>: Los cambios solo ocurren cuando el estado del componente padre cambia</li>
+        </ul>
+      </p>
+      <li>EXTENSA COMUNIDAD</li>
+      <p>Que decir de esta caracteristica, si tenes alguna duda, o necesitas que alguien te de una mano, hay mucha documentacion y una gran comunidad que le encanta ayudar a los demas.</p>
+    </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button><a href="index.html">VOLVER</a></button>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+  </body>
+</html>
